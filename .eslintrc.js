@@ -4,10 +4,9 @@ module.exports = {
         es2021: true,
     },
     extends: [
+        'plugin:@typescript-eslint/recommended',
         'plugin:nuxt/recommended',
         'prettier',
-
-        'plugin:@typescript-eslint/recommended',
     ],
     parserOptions: {
         ecmaVersion: 13,
