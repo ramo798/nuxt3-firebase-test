@@ -1,9 +1,9 @@
 export interface Hello {
-  msg:string;
+    msg: string;
 }
 
 export default () => {
-  return {
-    msg: "Hello World"
-  };
-}
+    return {
+        msg: 'Hello World',
+    };
+};
