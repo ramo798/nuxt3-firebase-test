@@ -1,5 +1,5 @@
 import { getFirestore, collection, query, getDocs } from 'firebase/firestore';
-import firebase from './firebase';
+import firebase from '../../plugins/firebase';
 
 export interface Tasks {
     id: string;
