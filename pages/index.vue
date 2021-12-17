@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const { data } = useAsyncData('getTest', () => $fetch('/api/gettest'));
+// const { data } = useAsyncData('getTest', () => $fetch('/api/gettest'));
+const { data } = await useFetch('/api/gettest');
 </script>
 
 <template>
