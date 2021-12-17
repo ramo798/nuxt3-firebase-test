@@ -4,9 +4,10 @@ module.exports = {
         es2021: true,
     },
     extends: [
+        'plugin:vue/vue3-recommended',
+        'prettier',
         'plugin:@typescript-eslint/recommended',
         'plugin:nuxt/recommended',
-        'prettier',
     ],
     parserOptions: {
         ecmaVersion: 13,
@@ -14,5 +15,7 @@ module.exports = {
         sourceType: 'module',
     },
     plugins: ['vue', '@typescript-eslint', '@typescript-eslint/eslint-plugin'],
-    rules: {},
+    rules: {
+        'no-unused-vars': 'off',
+    },
 };
