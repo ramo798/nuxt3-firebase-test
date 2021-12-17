@@ -1,1 +1,9 @@
-export default () => 'Hello Nuxt3 from server!'
+export interface Hello {
+  msg:string;
+}
+
+export default () => {
+  return {
+    msg: "Hello World"
+  };
+}
