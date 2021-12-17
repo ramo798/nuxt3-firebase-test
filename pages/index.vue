@@ -1,9 +1,9 @@
 <script setup lang="ts">
-const { data } = await useAsyncData('hello', () => $fetch('/api/users'));
+const { data: test } = useFetch('/api/hello');
 </script>
 
 <template>
     <div>
-        <p>hello</p>
+        <p>{{ test }}</p>
     </div>
 </template>
