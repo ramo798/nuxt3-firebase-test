@@ -5,6 +5,8 @@ const f = useFirestore();
 
 <script lang="ts">
 import { getAuth, signInWithPopup, TwitterAuthProvider } from 'firebase/auth';
+const f1 = useFirestore();
+
 export default {
     methods: {
         SignIn() {
@@ -13,6 +15,7 @@ export default {
                 const provider = new TwitterAuthProvider();
                 signInWithPopup(auth, provider)
                     .then((result) => {
+                        f1.testDo();
                         const user = result.user;
                         console.log(user);
                     })
