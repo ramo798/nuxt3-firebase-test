@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     typescript: {
         strict: true,
     },
+    ssr: true,
     privateRuntimeConfig: {
         apiKey: process.env.API_KEY,
         authDomain: process.env.AUTH_DOMAIN,
