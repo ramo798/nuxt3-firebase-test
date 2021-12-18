@@ -11,5 +11,6 @@ const { data: tasks } = await useFetch('/api/gettest');
             <p>{{ task.id }}</p>
             <p>{{ task.name }}</p>
         </div>
+        <NuxtLink to="/authpage">Home page</NuxtLink>
     </div>
 </template>
