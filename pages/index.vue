@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data } = useAsyncData('getTest', () => $fetch('/api/gettest'));
+// const { data } = useAsyncData('getTest', () => $fetch('/api/gettest'));
 const { data: tasks } = await useFetch('/api/gettest');
 // const foo = useFoo();
 // console.log(foo);
@@ -7,7 +7,6 @@ const { data: tasks } = await useFetch('/api/gettest');
 
 <template>
     <div>
-        <!-- <p @click="foo">test</p> -->
         <div v-for="task in tasks" :key="task.id">
             <p>{{ task.id }}</p>
             <p>{{ task.name }}</p>
