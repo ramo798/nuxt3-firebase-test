@@ -1,7 +1,6 @@
 import { initializeApp } from 'firebase/app';
 
 export const firebaseInit = () => {
-    console.log(11111);
     const firebaseConfig = {
         apiKey: 'AIzaSyC7FYkARD9eOMVbzUEvoeIMSRGciOOHuOk',
         authDomain: 'sabusuku-f9330.firebaseapp.com',

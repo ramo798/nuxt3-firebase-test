@@ -1,14 +1,43 @@
+import { useFireAuth } from '../composables/useFireAuth';
 <script setup lang="ts">
-// const { data: tasks } = await useFetch('/api/gettest');
-
 const f = useFirestore();
-// aaa.testDo();
+</script>
+
+<script lang="ts">
+import { getAuth, signInWithPopup, TwitterAuthProvider } from 'firebase/auth';
+export default {
+    methods: {
+        SignIn() {
+            try {
+                const auth = getAuth();
+                const provider = new TwitterAuthProvider();
+                signInWithPopup(auth, provider)
+                    .then((result) => {
+                        const user = result.user;
+                        console.log(user);
+                    })
+                    .catch((error) => {
+                        const errorCode = error.code;
+                        const errorMessage = error.message;
+                        const email = error.email;
+                        const credential =
+                            TwitterAuthProvider.credentialFromError(error);
+                        console.log(4, errorCode);
+                        console.log(5, errorMessage);
+                        console.log(6, email);
+                        console.log(7, credential);
+                    });
+            } catch (e) {
+                console.error(e);
+            }
+        },
+    },
+};
 </script>
 
 <template>
     <div>
         <p @click="f.testDo">Current : {{ f }}</p>
-
-        <NuxtLink to="/authpage">Home page</NuxtLink>
+        <p @click="SignIn">aaaaaa</p>
     </div>
 </template>
